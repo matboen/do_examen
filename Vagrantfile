@@ -9,7 +9,7 @@ Vagrant.configure(2) do |config|
     end
 	
 
-    config.vm.define "www1.dev}" do |node|
+    config.vm.define "www1.dev" do |node|
         node.vm.box = "ubuntu/trusty64"
         node.vm.hostname = "www1.dev"
         node.vm.network :private_network, ip: "192.168.55.89"
@@ -19,5 +19,4 @@ Vagrant.configure(2) do |config|
           vb.cpus = 2
         end
     end
-  end
 end

@@ -1,0 +1,13 @@
+# web
+- hosts: all
+  sudo: yes
+
+  tasks:
+
+  - name: deploy website content
+    template: src=https://github.com/AP-Elektronica-ICT/do_rollback_website/tree/stable.git dest=/usr/share/nginx/html/index.html
+
+  handlers:
+
+  - name: restart nginx
+    service: name=nginx state=restarted
